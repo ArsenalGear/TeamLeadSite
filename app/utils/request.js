@@ -1,44 +1,46 @@
-/**
- * Parses the JSON returned by a network request
- *
- * @param  {object} response A response from a network request
- *
- * @return {object}          The parsed JSON from the request
- */
-function parseJSON(response) {
-  if (response.status === 204 || response.status === 205) {
-    return null;
-  }
-  return response.json();
-}
-
-/**
- * Checks if a network request came back fine, and throws an error if not
- *
- * @param  {object} response   A response from a network request
- *
- * @return {object|undefined} Returns either the response, or throws an error
- */
-function checkStatus(response) {
-  if (response.status >= 200 && response.status < 300) {
-    return response;
-  }
-
-  const error = new Error(response.statusText);
-  error.response = response;
-  throw error;
-}
-
-/**
- * Requests a URL, returning a promise
- *
- * @param  {string} url       The URL we want to request
- * @param  {object} [options] The options we want to pass to "fetch"
- *
- * @return {object}           The response data
- */
-export default function request(url, options) {
-  return fetch(url, options)
-    .then(checkStatus)
-    .then(parseJSON);
-}
+// /* eslint-disable no-param-reassign */
+// import axios from 'axios';
+// import { getDataFromLocalStorageByKey } from './helper';
+//
+// export const API_BASE_ADDRESS = 'http://188.130.173.64:30080';
+//
+// export const client = axios.create({
+//   baseURL: API_BASE_ADDRESS,
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+// });
+//
+// export const clientFile = axios.create({
+//   baseURL: API_BASE_ADDRESS,
+//   headers: {
+//     'Content-Type': 'image/png',
+//   },
+// });
+//
+// client.interceptors.request.use(
+//   config => {
+//     if (!config.headers.Authorization) {
+//       const token = getDataFromLocalStorageByKey('TOKEN_KEY');
+//       if (token) config.headers.Authorization = `Bearer ${token}`;
+//     }
+//     return config;
+//   },
+//   error => Promise.reject(error),
+// );
+//
+// clientFile.interceptors.request.use(
+//   config => {
+//     if (!config.headers.Authorization) {
+//       const token = getDataFromLocalStorageByKey('TOKEN_KEY');
+//       if (token) config.headers.Authorization = `Bearer ${token}`;
+//     }
+//     return config;
+//   },
+//   error => Promise.reject(error),
+// );
+//
+// export const get = url => client.get(url);
+// export const getPdf = url => client.get(url, { responseType: 'blob' });
+// export const post = (url, data) => client.post(url, data);
+// export const postFile = (url, data) => clientFile.post(url, data);

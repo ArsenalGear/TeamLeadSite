@@ -1,22 +1,19 @@
-/**
- * Combine all reducers in this file and export the combined reducers.
- */
-
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
-
-import history from 'utils/history';
-import globalReducer from 'containers/App/reducer';
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
+import history from 'utils/history';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer } from 'redux-persist';
 
-/**
- * Merges the main reducer with the router state and dynamically injected reducers
- */
+const languagePersistConfig = {
+  key: 'language',
+  storage,
+};
+
 export default function createReducer(injectedReducers = {}) {
   const rootReducer = combineReducers({
-    global: globalReducer,
-    language: languageProviderReducer,
     router: connectRouter(history),
+    language: persistReducer(languagePersistConfig, languageProviderReducer),
     ...injectedReducers,
   });
 

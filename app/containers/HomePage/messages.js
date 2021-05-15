@@ -1,32 +1,47 @@
-/*
- * HomePage Messages
- *
- * This contains all the text for the HomePage component.
- */
 import { defineMessages } from 'react-intl';
 
-export const scope = 'boilerplate.containers.HomePage';
+export const scope = 'localisation.containers.HomePage';
 
 export default defineMessages({
-  startProjectHeader: {
-    id: `${scope}.start_project.header`,
-    defaultMessage: 'Start your next react project in seconds',
+  authorisation: {
+    id: `${scope}.authorisation`,
+    defaultMessage: 'authorisation',
   },
-  startProjectMessage: {
-    id: `${scope}.start_project.message`,
-    defaultMessage:
-      'A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices',
+  login: {
+    id: `${scope}.login`,
+    defaultMessage: 'login',
   },
-  trymeHeader: {
-    id: `${scope}.tryme.header`,
-    defaultMessage: 'Try me!',
+  password: {
+    id: `${scope}.password`,
   },
-  trymeMessage: {
-    id: `${scope}.tryme.message`,
-    defaultMessage: 'Show Github repositories by',
+  technicalSupport: {
+    id: `${scope}.technicalSupport`,
   },
-  trymeAtPrefix: {
-    id: `${scope}.tryme.atPrefix`,
-    defaultMessage: '@',
+  forgotPassword: {
+    id: `${scope}.forgotPassword`,
+  },
+  enter: {
+    id: `${scope}.enter`,
+  },
+  citationSlide1: {
+    id: `${scope}.citationSlide1`,
+  },
+  authorSlide1: {
+    id: `${scope}.authorSlide1`,
+  },
+  positionAuthorSlide1: {
+    id: `${scope}.positionAuthorSlide1`,
+  },
+  citationSlide2: {
+    id: `${scope}.citationSlide2`,
+  },
+  authorSlide2: {
+    id: `${scope}.authorSlide2`,
+  },
+  positionAuthorSlide2: {
+    id: `${scope}.positionAuthorSlide2`,
+  },
+  quote: {
+    id: `${scope}.quote`,
   },
 });

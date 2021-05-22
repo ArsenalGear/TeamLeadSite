@@ -6,9 +6,8 @@ export const SidebarWrapper = withStyles(theme => ({
     position: 'absolute',
     left: 10,
     top: 0,
-    height: '100vh',
-    width: '200px',
-    background: 'yellow',
+    width: '20rem',
+    background: theme.palette.secondary.main,
     [theme.breakpoints.up(1920)]: {},
   },
 }))(Box);

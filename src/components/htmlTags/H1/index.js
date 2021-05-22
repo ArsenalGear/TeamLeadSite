@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ParagraphWrapper } from './styles';
+import { HeaderWrapper } from './styles';
 
-const Paragraph = ({ children, ...props }) => (
-  <ParagraphWrapper className={` ${props.className}`} {...props}>
+const H1 = ({ children, ...props }) => (
+  <HeaderWrapper variant="h1" className={` ${props.className}`} {...props}>
     {children}
-  </ParagraphWrapper>
+  </HeaderWrapper>
 );
 
-Paragraph.propTypes = {
+H1.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
 };
 
-export default Paragraph;
+export {H1};

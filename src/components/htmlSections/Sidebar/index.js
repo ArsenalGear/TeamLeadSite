@@ -13,4 +13,4 @@ Sidebar.propTypes = {
   children: PropTypes.node,
 };
 
-export default Sidebar;
+export {Sidebar};

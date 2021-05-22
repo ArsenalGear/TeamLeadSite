@@ -1,5 +1,6 @@
 import React from 'react';
-import P from '../../../components/htmlTags/P';
+import { Grid } from '@material-ui/core';
+import { P } from '../../../components/htmlTags/P';
 
 const HomePage = () => {
   // const [selectedEndDate, setSelectedEndDate] = React.useState(new Date());
@@ -10,22 +11,13 @@ const HomePage = () => {
   // }, []);
   const test = 1;
   return (
-    <div className="App">
-      <header className="App-header">`
-        <P className="StreamChartLegend">StreamChartLegend</P>
-        <p>
-          Edit 11111111111111111111111112111 <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React</a>
-      </header>
-    </div>
+    <Grid container>
+      <Grid item xs={4}/>
+      <Grid item xs={8}>
+        <P>это тело страницы</P>
+      </Grid>
+    </Grid>
   );
-};
+}
 
-export default HomePage;
+export {HomePage};

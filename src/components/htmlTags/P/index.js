@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ParagraphWrapper } from './styles';
 
-const P = ({ children, ...props }) => (
-  <ParagraphWrapper className={` ${props.className}`} {...props}>
+const P = ({ children, variant="body1", ...props }) => (
+  <ParagraphWrapper variant={variant} className={` ${props.className}`} {...props}>
     {children}
   </ParagraphWrapper>
 );
@@ -13,4 +13,4 @@ P.propTypes = {
   children: PropTypes.node,
 };
 
-export default P;
+export {P};

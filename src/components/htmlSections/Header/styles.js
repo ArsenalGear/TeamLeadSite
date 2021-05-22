@@ -1,11 +1,14 @@
 import { withStyles } from '@material-ui/core/styles';
-import { Box } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 export const HeaderWrapper = withStyles(theme => ({
   root: {
-    height: '200px',
+    display: 'flex',
+    alignItems: 'center',
     width: '100%',
-    background: 'green',
+    height: '15rem',
+    paddingBottom: '2rem',
+    background: '#2d2d2d',
     [theme.breakpoints.up(1920)]: {},
   },
-}))(Box);
+}))(Grid);

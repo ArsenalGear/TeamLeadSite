@@ -1,0 +1,20 @@
+Фото
+SEO
+
+eslint
+PageSpeed
+Backend
+  Saga
+  Redux
+Локализация
+  подключить и перевести
+typescript
+useMemo
+useCallback
+useContext
+useRef
+customHook
+Найти программы по проверке оптимизации
+  в гите
+  на сайте
+Тесты

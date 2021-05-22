@@ -35,4 +35,3 @@ export const InfoDataBlock = withStyles(theme => ({
     [theme.breakpoints.up(1920)]: {},
   },
 }))(Box);
-

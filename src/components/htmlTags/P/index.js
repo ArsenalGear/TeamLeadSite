@@ -9,6 +9,7 @@ const P = ({ children, variant="body1", ...props }) => (
 );
 
 P.propTypes = {
+  variant: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node,
 };

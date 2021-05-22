@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { HeaderWrapper } from './styles';
 
-const Header = ({ children, ...props }) => (
-  <HeaderWrapper {...props}>
+const Header = ({ children }) => (
+  <HeaderWrapper>
     {children}
   </HeaderWrapper>
 );

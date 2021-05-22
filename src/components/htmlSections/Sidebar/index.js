@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SidebarWrapper } from './styles';
 
-const Sidebar = ({ children, ...props }) => (
-  <SidebarWrapper {...props}>
+const Sidebar = ({ children }) => (
+  <SidebarWrapper>
     {children}
   </SidebarWrapper>
 );

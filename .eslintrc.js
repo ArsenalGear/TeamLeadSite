@@ -1,12 +1,5 @@
-const fs = require('fs');
-const path = require('path');
-
-const prettierOptions = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
-);
-
 module.exports = {
-  parser: 'babel-eslint',
+  // parser: 'babel-eslint',
   // extends: ['airbnb'],
   plugins: ['react', 'react-hooks', 'jsx-a11y'],
   env: {
@@ -79,11 +72,11 @@ module.exports = {
     // 'redux-saga/yield-effects': 2,
     'require-yield': 0,
   },
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: './internals/webpack/webpack.prod.babel.js',
-      },
-    },
-  },
+  // settings: {
+  //   'import/resolver': {
+  //     webpack: {
+  //       config: './internals/webpack/webpack.prod.babel.js',
+  //     },
+  //   },
+  // },
 };

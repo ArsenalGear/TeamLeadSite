@@ -68,7 +68,6 @@ const theme = createMuiTheme({
       fontWeight: 400,
       fontSize: '1rem',
       lineHeight: '1.2rem',
-
       letterSpacing: 'normal',
       '@media (min-width:1920px)': {
         fontSize: '1rem',
@@ -111,6 +110,7 @@ const theme = createMuiTheme({
     // paragrph
     body1: {
       fontSize: '1rem',
+      marginBottom: '0.5rem',
       color: '#191919',
       '@media (min-width:1920px)': {
         fontSize: '1rem',

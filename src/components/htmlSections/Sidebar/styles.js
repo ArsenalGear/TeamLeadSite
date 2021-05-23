@@ -9,6 +9,14 @@ export const SidebarWrapper = withStyles(theme => ({
     width: '20rem',
     height: '100%',
     background: theme.palette.secondary.main,
-    [theme.breakpoints.up(1920)]: {},
+    [theme.breakpoints.down(1280)]: {
+      position: 'relative',
+      left: 0,
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'start',
+      width: '100%',
+      height: 'inherit',
+    },
   },
 }))(Box);

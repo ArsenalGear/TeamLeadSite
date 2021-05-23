@@ -9,7 +9,7 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import { H4 } from '../../../../../components/htmlTags/H4';
 import { P } from '../../../../../components/htmlTags/P';
 import React from 'react';
-import { TimelineOppositeData, TimelineWrapper } from './styles';
+import { TimelineItemBox, TimelineOppositeData, TimelineWrapper } from './styles';
 import PropTypes from 'prop-types';
 const TimeLineBox = ({title, timeLine}) => (
   <TimelineWrapper>
@@ -17,7 +17,7 @@ const TimeLineBox = ({title, timeLine}) => (
     <HR/>
     <Timeline position="right">
       {timeLine.map((block)=>(
-        <TimelineItem key={block.interval}>
+        <TimelineItemBox key={block.interval}>
           <TimelineOppositeData>{block.interval}</TimelineOppositeData>
           <TimelineSeparator>
             <TimelineDot>
@@ -31,7 +31,7 @@ const TimeLineBox = ({title, timeLine}) => (
               <P key={item}>{item}</P>
             ))}
           </TimelineContent>
-        </TimelineItem>
+        </TimelineItemBox>
       ))}
     </Timeline>
   </TimelineWrapper>

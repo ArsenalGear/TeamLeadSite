@@ -8,7 +8,9 @@ export const HeaderWrapper = withStyles(theme => ({
     width: '100%',
     height: '15rem',
     paddingBottom: '2rem',
-    background: '#2d2d2d',
-    [theme.breakpoints.up(1920)]: {},
+    background: '#343638',
+    [theme.breakpoints.down(1280)]: {
+      paddingLeft: '1rem',
+    },
   },
 }))(Box);

@@ -5,7 +5,8 @@ export const MainWrapper = withStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    // background: 'red',
-    [theme.breakpoints.up(1920)]: {},
+    [theme.breakpoints.down(1280)]: {
+      paddingLeft: '1rem'
+    },
   },
 }))(Box);

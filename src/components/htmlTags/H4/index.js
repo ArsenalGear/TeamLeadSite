@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { HeaderWrapper } from './styles';
 
-const H4 = ({ children, ...props }) => (
-  <HeaderWrapper variant="h4" className={` ${props.className}`} {...props}>
+const H4 = ({ children, className }) => (
+  <HeaderWrapper variant="h4" className={className}>
     {children}
   </HeaderWrapper>
 );

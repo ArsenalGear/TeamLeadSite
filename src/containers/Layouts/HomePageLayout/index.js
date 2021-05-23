@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AvatarBlock, HomePageLayoutWrapper, Info } from './styles';
+import { HomePageLayoutWrapper, Info } from './styles';
 import { Grid } from '@material-ui/core';
 import avatar from '../../../../src/images/user/AlexandrBoldyrev.jpg';
 import { Sidebar } from '../../../components/htmlSections/Sidebar';
@@ -13,7 +13,7 @@ import { contactData } from '../../../components/htmlSections/Sidebar/constants'
 const HomePageLayout = ({ children }) => (
   <HomePageLayoutWrapper container justify='center'>
     <Sidebar>
-      <AvatarBlock alt="Болдырев Александр" src={avatar}/>
+      <img style={{width: '20rem'}} alt="Болдырев Александр" src={avatar}/>
       <Info>
         {contactData.map((block)=>(
           <InfoBlock
@@ -25,13 +25,12 @@ const HomePageLayout = ({ children }) => (
       </Info>
     </Sidebar>
     <Header container>
-      <Grid item xs={4}/>
-      <Grid item xs={8}>
+      <Grid item lg={4} xs={0}/>
+      <Grid item lg={8} xs={12}>
         <H1 className="user-name">Болдырев Александр</H1>
         <H2 className="user-experience">Frontend Team Leader and React developer</H2>
       </Grid>
     </Header>
-    {/*сюда залетает конкретный main конкретной страницы*/}
     {children}
   </HomePageLayoutWrapper>
 );

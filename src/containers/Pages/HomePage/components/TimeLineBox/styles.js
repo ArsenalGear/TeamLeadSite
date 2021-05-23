@@ -1,6 +1,7 @@
 import { withStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
+import TimelineItem from '@material-ui/lab/TimelineItem';
 
 export const TimelineWrapper = withStyles(theme => ({
   root: {
@@ -18,3 +19,10 @@ export const TimelineOppositeData = withStyles(theme => ({
     [theme.breakpoints.up(1920)]: {},
   },
 }))(TimelineOppositeContent);
+
+export const TimelineItemBox = withStyles(theme => ({
+  root: {
+    color: theme.typography.h4.color,
+    [theme.breakpoints.up(1920)]: {},
+  },
+}))(TimelineItem);

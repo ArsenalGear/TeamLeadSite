@@ -23,7 +23,7 @@ const Skills = ({skills}) => (
       ))}
     </SkillsBlock>
   </SkillsWrapper>
-)
+);
 
 Skills.propTypes = {
   skills: PropTypes.array,

@@ -25,7 +25,7 @@ const HomePageLayout = ({ children }) => (
       </Info>
     </Sidebar>
     <Header container>
-      <Grid item lg={4} xs={0}/>
+      <Grid item lg={4} xs={false}/>
       <Grid item lg={8} xs={12}>
         <H1 className="user-name">Болдырев Александр</H1>
         <H2 className="user-experience">Frontend Team Leader and React developer</H2>

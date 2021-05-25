@@ -16,7 +16,7 @@ const HomePage = () => {
 
   return (
     <Grid container>
-      <Grid item lg={4} xs={0}/>
+      <Grid item lg={4} xs={false}/>
       <Grid item lg={8} xs={12}>
         <MainWrapper>
           {timeLineData.map((block)=>(

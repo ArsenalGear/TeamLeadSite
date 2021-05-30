@@ -19,7 +19,7 @@ const HomePage = () => {
 
   return (
     <Grid container>
-        <Grid item lg={4} xs={false} />
+      <Grid item lg={4} xs={false} />
       <Grid item lg={8} xs={12}>
         {/* {sexList.map(e => ( */}
         {/*  <p key={e.title}>{e.title}</p> */}

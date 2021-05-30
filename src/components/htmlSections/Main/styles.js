@@ -6,7 +6,7 @@ export const MainWrapper = withStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     [theme.breakpoints.down(1280)]: {
-      paddingLeft: '1rem'
+      paddingLeft: '1rem',
     },
   },
 }))(Box);

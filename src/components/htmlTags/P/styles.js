@@ -3,8 +3,6 @@ import Typography from '@material-ui/core/Typography';
 
 export const ParagraphWrapper = withStyles(theme => ({
   root: {
-    '&.description': {
-
-    },
+    '&.description': {},
   },
 }))(Typography);

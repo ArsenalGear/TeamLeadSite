@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 `;
-export {GlobalStyle};
+export { GlobalStyle };
 
 const theme = createMuiTheme({
   palette: {
@@ -101,4 +101,4 @@ const theme = createMuiTheme({
     },
   },
 });
-export {theme};
+export { theme };

@@ -13,4 +13,4 @@ H2.propTypes = {
   children: PropTypes.node,
 };
 
-export {H2};
+export { H2 };

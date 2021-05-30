@@ -22,7 +22,7 @@ const HomePage = () => {
       <Grid item lg={4} xs={false} />
       <Grid item lg={8} xs={12}>
         {/* {sexList.map(e => ( */}
-        {/*  <p key={e.title}>{e.title}</p> */}
+        {/*  <p key={e.title}>{e.title} </p> */}
         {/* ))} */}
         <MainWrapper>
           {timeLineData.map(block => (

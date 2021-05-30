@@ -34,7 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:staged": "lint-staged"
   },
   "browserslist": {
     "production": [
@@ -48,6 +49,17 @@
       "last 1 safari version"
     ]
   },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:eslint:fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
+  "pre-commit": "lint:staged",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.27.0",
@@ -58,6 +70,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-airbnb-base": "13.1.0",
+    "lint-staged": "8.1.5",
     "prettier": "1.17.0"
   }
 }

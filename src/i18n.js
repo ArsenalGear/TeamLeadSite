@@ -1,13 +1,7 @@
 const ruTranslationMessages = require('./translations/ru.json');
 const enTranslationMessages = require('./translations/en.json');
 
-// const DEFAULT_LOCALE = 'en';
-
-// prettier-ignore
-const appLocales = [
-  'ru',
-  'en',
-];
+const appLocales = ['ru', 'en'];
 // use default language from browser
 const { language } = window.navigator;
 
@@ -17,14 +11,10 @@ const DEFAULT_LOCALE = isAvailableLanguage ? language.slice(0, 2) : 'ru';
 
 const formatTranslationMessages = (locale, messages) => {
   const defaultFormattedMessages =
-    locale !== DEFAULT_LOCALE
-      ? formatTranslationMessages(DEFAULT_LOCALE, enTranslationMessages)
-      : {};
+    locale !== DEFAULT_LOCALE ? formatTranslationMessages(DEFAULT_LOCALE, enTranslationMessages) : {};
   const flattenFormattedMessages = (formattedMessages, key) => {
     const formattedMessage =
-      !messages[key] && locale !== DEFAULT_LOCALE
-        ? defaultFormattedMessages[key]
-        : messages[key];
+      !messages[key] && locale !== DEFAULT_LOCALE ? defaultFormattedMessages[key] : messages[key];
     return Object.assign(formattedMessages, { [key]: formattedMessage });
   };
   return Object.keys(messages).reduce(flattenFormattedMessages, {});

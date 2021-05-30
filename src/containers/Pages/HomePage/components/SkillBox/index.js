@@ -21,11 +21,7 @@ const Skills = ({ skills }) => (
             <H4 className="skills">{block.title}</H4>
             <H4 className="skills">{block.value}%</H4>
           </SkillName>
-          <BorderLinearProgress
-            color={block.color}
-            variant="determinate"
-            value={block.value}
-          />
+          <BorderLinearProgress color={block.color} variant="determinate" value={block.value} />
         </SkillsBlockWrapper>
       ))}
     </SkillsBlock>

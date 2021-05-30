@@ -1,12 +1,4 @@
-import {
-  DateRange,
-  GitHub,
-  Home,
-  LinkedIn,
-  Mail,
-  Person,
-  Telegram,
-} from '@material-ui/icons';
+import { DateRange, GitHub, Home, LinkedIn, Mail, Person, Telegram } from '@material-ui/icons';
 import React from 'react';
 
 export const contactData = [

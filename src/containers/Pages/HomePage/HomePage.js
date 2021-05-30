@@ -21,11 +21,10 @@ const HomePage = () => {
     <Grid container>
       <Grid item lg={4} xs={false} />
       <Grid item lg={8} xs={12}>
-        {sexList.map(e => (
-          <p key={e.title}>{e.title}</p>
-        ))}
+        {/* {sexList.map(e => ( */}
+        {/*  <p key={e.title}>{e.title}</p> */}
+        {/* ))} */}
         <MainWrapper>
-          <>123</>
           {timeLineData.map(block => (
             <TimeLineBox
               key={block.title}

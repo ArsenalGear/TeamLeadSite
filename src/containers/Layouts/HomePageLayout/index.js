@@ -16,11 +16,7 @@ const HomePageLayout = ({ children }) => (
       <img style={{ width: '20rem' }} alt="Болдырев Александр" src={avatar} />
       <Info>
         {contactData.map(block => (
-          <InfoBlock
-            key={Math.random()}
-            title={block.title}
-            data={block.data}
-          />
+          <InfoBlock key={Math.random()} title={block.title} data={block.data} />
         ))}
       </Info>
     </Sidebar>
@@ -28,9 +24,7 @@ const HomePageLayout = ({ children }) => (
       <Grid item lg={4} xs={false} />
       <Grid item lg={8} xs={12}>
         <H1 className="user-name">Болдырев Александр</H1>
-        <H2 className="user-experience">
-          Frontend Team Leader and React developer
-        </H2>
+        <H2 className="user-experience">Frontend Team Leader and React developer</H2>
       </Grid>
     </Header>
     {children}

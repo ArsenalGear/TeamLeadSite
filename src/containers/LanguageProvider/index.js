@@ -8,11 +8,7 @@ import { makeSelectLocale } from './selectors';
 
 export function LanguageProvider({ selectedLocale, children, messages }) {
   return (
-    <IntlProvider
-      locale={selectedLocale}
-      key={selectedLocale}
-      messages={messages[selectedLocale]}
-    >
+    <IntlProvider locale={selectedLocale} key={selectedLocale} messages={messages[selectedLocale]}>
       {React.Children.only(children)}
     </IntlProvider>
   );

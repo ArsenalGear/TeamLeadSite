@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  InfoBlockWrapper,
-  InfoCardBlock,
-  InfoDataBlock,
-  InfoIconBlock,
-} from './styles';
+import { InfoBlockWrapper, InfoCardBlock, InfoDataBlock, InfoIconBlock } from './styles';
 import { H3 } from '../../../htmlTags/H3';
 import { HR } from '../../../htmlTags/HR';
 import { P } from '../../../htmlTags/P';

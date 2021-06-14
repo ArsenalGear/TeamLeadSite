@@ -6,22 +6,21 @@ import { TimeLineBox } from './components/TimeLineBox';
 import { skills, timeLineData } from './constants';
 import { Skills } from './components/SkillBox';
 import { AboutMe } from './components/AboutMeBox';
-import { getSexesDictionary } from './store/actions';
-import { sexListSelector } from './store/selectors';
+import { getTestData } from './store/actions';
+import { testDataSelector } from './store/selectors';
 
 const HomePage = () => {
-  // const [selectedEndDate, setSelectedEndDate] = React.useState(new Date());
   const dispatch = useDispatch();
-  const sexList = useSelector(sexListSelector());
+  const testAsyncData = useSelector(testDataSelector());
   React.useEffect(() => {
-    dispatch(getSexesDictionary());
+    dispatch(getTestData());
   }, [dispatch]);
 
   return (
     <Grid container>
       <Grid item lg={4} xs={false} />
       <Grid item lg={8} xs={12}>
-        {/* {sexList.map(e => ( */}
+        {/* {testAsyncData.map(e => ( */}
         {/*  <p key={e.title}>{e.title} </p> */}
         {/* ))} */}
         <MainWrapper>

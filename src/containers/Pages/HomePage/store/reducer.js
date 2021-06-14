@@ -1,7 +1,7 @@
 import produce from 'immer';
-import { GET_SEXES_DICTIONARY_SUCCESS } from './constants';
+import { GET_TEST_DATA_SUCCESS } from './constants';
 export const initialDictionaryState = {
-  sexes: [],
+  data: [],
 };
 
 /* eslint-disable default-case, no-param-reassign */
@@ -10,8 +10,8 @@ const DictionaryReducer = (state = initialDictionaryState, action) =>
   produce(state, draft => {
     // console.log('action', action);
     switch (action.type) {
-      case GET_SEXES_DICTIONARY_SUCCESS:
-        draft.sexes = action.dictionary;
+      case GET_TEST_DATA_SUCCESS:
+        draft.data = action.dictionary;
         break;
     }
   });

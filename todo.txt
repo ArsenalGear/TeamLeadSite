@@ -1,20 +1,16 @@
-Фото
-SEO
-
-eslint
-PageSpeed
-Backend
-  Saga
-  Redux
+Редизайн
+useMemo
+  useCallback
+  useRef
+  customHook
+Backend - api
+Тесты
+typescript
 Локализация
   подключить и перевести
-typescript
-useMemo
-useCallback
-useContext
-useRef
-customHook
+PageSpeed
+Фото
 Найти программы по проверке оптимизации
   в гите
   на сайте
-Тесты
+SEO

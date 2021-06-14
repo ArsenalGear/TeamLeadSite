@@ -3,10 +3,10 @@ import { initialDictionaryState } from './reducer';
 
 const selectDictionaries = state => state.dictionaries || initialDictionaryState;
 
-const sexListSelector = () =>
+const testDataSelector = () =>
   createSelector(
     selectDictionaries,
-    state => state.sexes,
+    state => state.data,
   );
 
-export { sexListSelector };
+export { testDataSelector };

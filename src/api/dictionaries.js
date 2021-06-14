@@ -1,3 +1,3 @@
 import { get } from '../utils/request';
 
-export const getSexes = () => get(`/posts`).then(response => response.data);
+export const getTestDataApi = () => get(`/posts`).then(response => response.data);

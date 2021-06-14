@@ -1,17 +1,13 @@
-import {
-  GET_SEXES_DICTIONARY_FAILED,
-  GET_SEXES_DICTIONARY_REQUEST,
-  GET_SEXES_DICTIONARY_SUCCESS,
-} from './constants';
+import { GET_TEST_DATA_FAILED, GET_TEST_DATA_REQUEST, GET_TEST_DATA_SUCCESS } from './constants';
 
-export const getSexesDictionary = () => ({
-  type: GET_SEXES_DICTIONARY_REQUEST,
+export const getTestData = () => ({
+  type: GET_TEST_DATA_REQUEST,
 });
-export const setSexesDictionary = dictionary => ({
-  type: GET_SEXES_DICTIONARY_SUCCESS,
+export const setTestData = dictionary => ({
+  type: GET_TEST_DATA_SUCCESS,
   dictionary,
 });
-export const getSexesDictionaryFailed = error => ({
-  type: GET_SEXES_DICTIONARY_FAILED,
+export const getTestDataFailed = error => ({
+  type: GET_TEST_DATA_FAILED,
   error,
 });

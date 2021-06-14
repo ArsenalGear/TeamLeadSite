@@ -1,19 +1,19 @@
 import { put, takeLatest, call } from 'redux-saga/effects';
-import { GET_SEXES_DICTIONARY_REQUEST } from './constants';
+import { GET_TEST_DATA_REQUEST } from './constants';
 // eslint-disable-next-line import/namespace,import/named
-import { getSexes } from '../../../../api/dictionaries';
-import { setSexesDictionary } from './actions';
+import { getTestDataApi } from '../../../../api/dictionaries';
+import { setTestData } from './actions';
 
 // Dictionaries
-export function* getSexesDictionarySaga() {
+export function* getTestDataSaga() {
   try {
-    const sexesDictionary = yield call(getSexes);
-    yield put(setSexesDictionary(sexesDictionary));
+    const testData = yield call(getTestDataApi);
+    yield put(setTestData(testData));
   } catch (error) {
-    // yield put(getSexesDictionaryFailed(error));
+    // yield put(getTestDataFailed(error));
   }
 }
 
-export default function* getSexesDictionarySagaWatcher() {
-  yield takeLatest(GET_SEXES_DICTIONARY_REQUEST, getSexesDictionarySaga);
+export default function* getTestDataSagaWatcher() {
+  yield takeLatest(GET_TEST_DATA_REQUEST, getTestDataSaga);
 }

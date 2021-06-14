@@ -29,3 +29,33 @@ div {
   color: red;
   text-transform: uppercase;
 }
+
+/*//    "@babel/cli": "7.4.3",*/
+/*//    "@babel/core": "7.4.3",*/
+/*//    "@babel/plugin-proposal-class-properties": "7.4.0",*/
+/*//    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",*/
+/*//    "@babel/plugin-proposal-optional-chaining": "^7.12.1",*/
+/*//    "@babel/plugin-syntax-dynamic-import": "7.2.0",*/
+/*//    "@babel/plugin-transform-modules-commonjs": "7.4.3",*/
+/*//    "@babel/plugin-transform-react-constant-elements": "7.2.0",*/
+/*//    "@babel/plugin-transform-react-inline-elements": "7.2.0",*/
+/*//    "@babel/preset-env": "7.4.3",*/
+/*//    "@babel/preset-react": "7.0.0",*/
+/*//    "@babel/register": "7.4.0",*/
+
+/*//    "babel-core": "7.0.0-bridge.0",*/
+/*//    "babel-loader": "8.0.5",*/
+/*//    "babel-plugin-dynamic-import-node": "2.2.0",*/
+/*//    "babel-plugin-lodash": "3.3.4",*/
+/*//    "babel-plugin-react-intl": "3.0.1",*/
+/*//    "babel-plugin-styled-components": "1.10.0",*/
+/*//    "babel-plugin-transform-react-remove-prop-types": "0.4.24",*/
+
+/*//    "eslint-config-react": "^1.1.7",*/
+/*//    "eslint-import-resolver-webpack": "0.11.1",*/
+/*//    "eslint-plugin-import": "2.17.2",*/
+/*//    "eslint-plugin-jsx-a11y": "6.2.1",*/
+/*//    "eslint-plugin-react": "7.12.4",*/
+
+/*//    "stylelint": "10.0.1",*/
+/*//    "stylelint-config-recommended": "2.2.0"*/

@@ -4,7 +4,7 @@ import { HR } from '../../../../../components/htmlTags/HR';
 import { P } from '../../../../../components/htmlTags/P';
 import { AboutMeWrapper } from './styles';
 const AboutMe = () => (
-  <AboutMeWrapper>
+  <AboutMeWrapper id="about">
     <H3>О Себе</H3>
     <HR />
     <P>

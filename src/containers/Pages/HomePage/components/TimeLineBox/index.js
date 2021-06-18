@@ -14,7 +14,7 @@ const TimeLineBox = ({ title, timeLine }) => (
   <TimelineWrapper>
     <H3>{title}</H3>
     <HR />
-    <Timeline position="right">
+    <Timeline id="experience" position="right">
       {timeLine.map(block => (
         <TimelineItemBox key={block.interval}>
           <TimelineOppositeData>{block.interval}</TimelineOppositeData>

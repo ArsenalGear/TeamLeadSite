@@ -1,16 +1,53 @@
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 
-export const HeaderWrapper = withStyles(theme => ({
+export const useStyles = makeStyles(theme => ({
+  header: {
+    // background: 'blue',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
+    width: '100%',
+    backgroundColor: '#000',
+  },
+  nav: {
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    left: 0,
+    zIndex: 1030,
+    padding: '5px 0',
+    color: theme.palette.secondary.main,
+    backgroundColor: '#343a40',
+  },
+  navList: {
+    display: 'flex',
+  },
+  logo: {
+    animation: 'moving 20s infinite linear',
+  },
+  socialLink: {
+    margin: '1rem 2rem',
+    color: theme.palette.secondary.main,
+    fontSize: '2.5rem',
+  },
+}));
+
+export const HeaderBody = withStyles(theme => ({
+  root: {
+    width: '100%',
+    maxWidth: '1140px',
+    textAlign: 'center',
+    [theme.breakpoints.down(1280)]: {},
+  },
+}))(Box);
+
+export const SocialBlock = withStyles(theme => ({
   root: {
     display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    height: '15rem',
-    paddingBottom: '2rem',
-    background: '#343638',
-    [theme.breakpoints.down(1280)]: {
-      paddingLeft: '1rem',
-    },
+    justifyContent: 'center',
+    [theme.breakpoints.down(1280)]: {},
   },
 }))(Box);

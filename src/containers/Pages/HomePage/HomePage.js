@@ -23,6 +23,7 @@ const HomePage = () => {
         {/* {testAsyncData.map(e => ( */}
         {/*  <p key={e.title}>{e.title} </p> */}
         {/* ))} */}
+        <Skills skills={skills} />
         <MainWrapper>
           {timeLineData.map(block => (
             <TimeLineBox
@@ -33,7 +34,6 @@ const HomePage = () => {
             />
           ))}
           <AboutMe />
-          <Skills skills={skills} />
         </MainWrapper>
       </Grid>
     </Grid>

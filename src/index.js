@@ -8,6 +8,7 @@ import { GlobalStyle, theme } from './global-styles';
 import { translationMessages } from './i18n';
 import history from './utils/history';
 import configureStore from './configureStore';
+import './styles.css';
 
 const initialState = {};
 const store = configureStore(initialState, history);

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
+import { red, grey } from '@material-ui/core/colors';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Roboto', 'Open Sans', sans-serif;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -42,26 +41,29 @@ const GlobalStyle = createGlobalStyle`
   a:hover {
     text-decoration: none;
   }
+
+  li {
+    list-style-type: none;
+  }
 `;
 export { GlobalStyle };
 
 const theme = createMuiTheme({
   palette: {
-    // primary: {
-    //   main: orange[700],
-    //   contrastText: common.white,
-    // },
+    primary: {
+      main: grey[900],
+      // contrastText: common.white,
+    },
     secondary: {
-      main: '#d8dcdd',
+      main: grey[50],
       // secondary: grey[50],
     },
   },
   typography: {
     h1: {
       fontWeight: 400,
-      fontSize: '4rem',
-      lineHeight: '5rem',
-      color: '#26282a',
+      fontSize: '5rem',
+      lineHeight: '6rem',
     },
     h2: {
       fontWeight: 400,
@@ -74,7 +76,6 @@ const theme = createMuiTheme({
       fontWeight: 400,
       fontSize: '1.5rem',
       lineHeight: '1.75rem',
-      color: '#26282a',
     },
     h4: {
       fontWeight: 400,

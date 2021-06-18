@@ -11,7 +11,7 @@ import {
 } from './styles';
 import { H4 } from '../../../../../components/htmlTags/H4';
 const Skills = ({ skills }) => (
-  <SkillsWrapper>
+  <SkillsWrapper id="skills">
     <H3>Скилы и экспертиза</H3>
     <HR />
     <SkillsBlock>

@@ -13,7 +13,7 @@ const ScrollLink = ({ children, linkTo }) => {
       spy
       smooth
       duration={750}
-      offset={-200}
+      offset={-180}
     >
       {children}
     </Link>

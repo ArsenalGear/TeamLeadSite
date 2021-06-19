@@ -1,16 +1,6 @@
-Редизайн
+Тесты
 useMemo
   useCallback
   useRef
   customHook
-Backend - api
-Тесты
 typescript
-Локализация
-  подключить и перевести
-PageSpeed
-Фото
-Найти программы по проверке оптимизации
-  в гите
-  на сайте
-SEO

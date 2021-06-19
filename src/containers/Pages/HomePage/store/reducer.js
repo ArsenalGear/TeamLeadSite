@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { GET_TEST_DATA_SUCCESS } from './constants';
+import { GET_MENU_DATA_SUCCESS } from './constants';
 export const initialDictionaryState = {
   data: [],
 };
@@ -10,7 +10,7 @@ const DictionaryReducer = (state = initialDictionaryState, action) =>
   produce(state, draft => {
     // console.log('action', action);
     switch (action.type) {
-      case GET_TEST_DATA_SUCCESS:
+      case GET_MENU_DATA_SUCCESS:
         draft.data = action.dictionary;
         break;
     }

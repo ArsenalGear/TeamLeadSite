@@ -1,29 +1,35 @@
 import React from 'react';
-import { H3 } from '../../../../../components/htmlTags/H3';
-import { HR } from '../../../../../components/htmlTags/HR';
+import { Grid } from '@material-ui/core';
+import { Link } from 'react-scroll';
+import { AiOutlineUpCircle } from 'react-icons/all';
 import { P } from '../../../../../components/htmlTags/P';
-import { AboutMeWrapper } from './styles';
+import { AboutMeWrapper, ArrowBox, AvatarWrapper, IconDown } from './styles';
+import { Section } from '../../../../../components/htmlSections/Section';
+import avatar from '../../../../../images/user/AlexandrBoldyrev.jpg';
+import { about } from '../../constants';
 const AboutMe = () => (
-  <AboutMeWrapper id="about">
-    <H3>О Себе</H3>
-    <HR />
-    <P>
-      &nbsp;&nbsp; Всегда активен по части предложения новых нестандартных решений как по проекту
-      (выход за рамки своей ответственности), так и за его пределами.
-    </P>
-    <P>
-      &nbsp;&nbsp; Обожаю работать в хорошо сформированной Scrum команде, с позитивным настроем и
-      чувством юмора. Есть положительный опыт работы в качестве Фронтэнд Тимлида в Финтех проекте с
-      составом в 6 человек и опытом работы в командах более 20 человек одновременно.
-    </P>
-    <P>
-      &nbsp;&nbsp; Очень ответственно отношусь к своей и чужой работе и стараюсь всегда довести ее
-      до конечного результата. Читаю на английском без словаря. Всячески стараюсь развивать себя
-      самостоятельно как по процессу написания кода, так и как личность. В свободное время люблю
-      кататься на велосипеде.
-    </P>
-    <P>&nbsp;&nbsp; Владею английским на уровне B1.</P>
-  </AboutMeWrapper>
+  <section id="about">
+    <AboutMeWrapper container>
+      <Grid item lg={12} xs={12}>
+        <Section title="О себе" />
+      </Grid>
+      <Grid item lg={4} xs={12}>
+        <AvatarWrapper alt="Болдырев Александр" src={avatar} />
+      </Grid>
+      <Grid item lg={8} xs={12}>
+        {about.map(block => (
+          <P key={block.text}>&nbsp;&nbsp;{block.text}</P>
+        ))}
+      </Grid>
+      <ArrowBox>
+        <Link to="main" smooth offset={-180} duration={750}>
+          <IconDown>
+            <AiOutlineUpCircle />
+          </IconDown>
+        </Link>
+      </ArrowBox>
+    </AboutMeWrapper>
+  </section>
 );
 
 export { AboutMe };

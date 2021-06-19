@@ -1,13 +1,13 @@
-import { GET_TEST_DATA_FAILED, GET_TEST_DATA_REQUEST, GET_TEST_DATA_SUCCESS } from './constants';
+import { GET_MENU_DATA_FAILED, GET_MENU_DATA_REQUEST, GET_MENU_DATA_SUCCESS } from './constants';
 
-export const getTestData = () => ({
-  type: GET_TEST_DATA_REQUEST,
+export const getMenuData = () => ({
+  type: GET_MENU_DATA_REQUEST,
 });
-export const setTestData = dictionary => ({
-  type: GET_TEST_DATA_SUCCESS,
+export const setMenuData = dictionary => ({
+  type: GET_MENU_DATA_SUCCESS,
   dictionary,
 });
-export const getTestDataFailed = error => ({
-  type: GET_TEST_DATA_FAILED,
+export const getMenuDataFailed = error => ({
+  type: GET_MENU_DATA_FAILED,
   error,
 });

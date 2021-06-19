@@ -3,14 +3,12 @@ import { Box } from '@material-ui/core';
 
 export const useStyles = makeStyles(theme => ({
   header: {
-    // background: 'blue',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
     width: '100%',
-    backgroundColor: '#000',
   },
   nav: {
     position: 'fixed',

@@ -1,41 +1,33 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import { useDispatch, useSelector } from 'react-redux';
-import { MainWrapper } from '../../../components/htmlSections/Main/styles';
+import { useDispatch } from 'react-redux';
 import { TimeLineBox } from './components/TimeLineBox';
 import { skills, timeLineData } from './constants';
 import { Skills } from './components/SkillBox';
-import { AboutMe } from './components/AboutMeBox';
-import { getTestData } from './store/actions';
-import { testDataSelector } from './store/selectors';
+import { getMenuData } from './store/actions';
+import { Section } from '../../../components/htmlSections/Section';
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const testAsyncData = useSelector(testDataSelector());
   React.useEffect(() => {
-    dispatch(getTestData());
+    dispatch(getMenuData());
   }, [dispatch]);
 
   return (
     <Grid container>
-      <Grid item lg={4} xs={false} />
-      <Grid item lg={8} xs={12}>
-        {/* {testAsyncData.map(e => ( */}
-        {/*  <p key={e.title}>{e.title} </p> */}
-        {/* ))} */}
-        <Skills skills={skills} />
-        <MainWrapper>
-          {timeLineData.map(block => (
-            <TimeLineBox
-              key={block.title}
-              title={block.title}
-              icon={block.icon}
-              timeLine={block.timeLine}
-            />
-          ))}
-          <AboutMe />
-        </MainWrapper>
-      </Grid>
+      <section id="skills">
+        <Section title="Скилы и экспертиза">
+          <Skills skills={skills} />
+        </Section>
+      </section>
+      {timeLineData.map(block => (
+        <TimeLineBox
+          key={block.title}
+          title={block.title}
+          timeLine={block.timeLine}
+          id={block.id}
+        />
+      ))}
     </Grid>
   );
 };

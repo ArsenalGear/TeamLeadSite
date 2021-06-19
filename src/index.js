@@ -5,9 +5,10 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import App from './containers/App/App';
 import { GlobalStyle, theme } from './global-styles';
 // import '@babel/polyfill';
-import { translationMessages } from './i18n';
 import history from './utils/history';
 import configureStore from './configureStore';
+import './styles.css';
+// import { translationMessages } from './i18n';
 
 const initialState = {};
 const store = configureStore(initialState, history);
@@ -26,26 +27,28 @@ const render = () => {
 };
 
 if (module.hot) {
-  module.hot.accept(['./i18n'], () => {
-    ReactDOM.unmountComponentAtNode(MOUNT_NODE);
-    render(translationMessages);
-  });
+  // module.hot.accept(['./i18n'], () => {
+  //   ReactDOM.unmountComponentAtNode(MOUNT_NODE);
+  //   render(translationMessages);
+  // });
+  ReactDOM.unmountComponentAtNode(MOUNT_NODE);
+  render();
 }
 
 if (!window.Intl) {
-  new Promise(resolve => {
-    resolve(import('intl'));
-  })
-    .then(() =>
-      Promise.all([
-        // import('intl/locale -data/jsonp/ru.js'),
-        // import('intl/locale-data/jsonp/en.js'),
-      ]),
-    )
-    .then(() => render(translationMessages))
-    .catch(err => {
-      throw err;
-    });
+  // new Promise(resolve => {
+  //   resolve(import('intl'));
+  // })
+  //   .then(() =>
+  //     Promise.all([
+  //       // import('intl/locale -data/jsonp/ru.js'),
+  //       // import('intl/locale-data/jsonp/en.js'),
+  //     ]),
+  //   )
+  //   .then(() => render(translationMessages))
+  //   .catch(err => {
+  //     throw err;
+  //   });
 } else {
-  render(translationMessages);
+  render();
 }

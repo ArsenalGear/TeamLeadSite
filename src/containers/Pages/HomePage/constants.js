@@ -1,14 +1,17 @@
-import { Group, Http, School, Work } from '@material-ui/icons';
 import React from 'react';
+import { IoMdSchool, MdHttp, MdWork, TiGroup } from 'react-icons/all';
+import { FaGithub, FaTelegramPlane, FaLinkedinIn } from 'react-icons/fa';
 
 export const timeLineData = [
   {
     title: 'Опыт работы',
+    id: 'experience',
     timeLine: [
       {
         interval: '2021 - 2???',
         company: 'SYNC',
-        icon: <Group />,
+
+        icon: <TiGroup />,
         responsibilities: [
           'Адаптивная кроссбраузерная верстка сайтов.',
           'Разработка фронтэнд части сайта с помощью библиотеки, React.',
@@ -24,7 +27,7 @@ export const timeLineData = [
       {
         interval: '2018 - 2021',
         company: 'FlyCode',
-        icon: <Work />,
+        icon: <MdWork />,
         responsibilities: [
           'Адаптивная кроссбраузерная верстка сайтов.',
           'Разработка фронтэнд части сайта с помощью библиотек и фреймворков jQuery, React, Vue.',
@@ -38,24 +41,24 @@ export const timeLineData = [
 
   {
     title: 'Образование',
-
+    id: 'education',
     timeLine: [
       {
         interval: '2021 - 2022',
         company: 'Яндекс.Практикум',
-        icon: <Http />,
+        icon: <MdHttp />,
         responsibilities: ['Управление командой.'],
       },
       {
         interval: '2017 - 2021',
         company: 'ТГУ им. Державина',
-        icon: <School />,
+        icon: <IoMdSchool />,
         responsibilities: ['Прикладная Информатика (Заочно) - красный диплом.'],
       },
       {
         interval: '2004 - 2007',
         company: 'Проф. лицей №17',
-        icon: <School />,
+        icon: <IoMdSchool />,
         responsibilities: [
           'Информационный, Автоматизированные системы обработки информации и управления.',
         ],
@@ -65,25 +68,60 @@ export const timeLineData = [
 ];
 
 export const skills = [
-  { title: 'HTML', color: 'secondary', value: 80 },
-  { title: 'UX/UI', color: 'secondary', value: 50 },
-  { title: 'CSS', color: 'secondary', value: 80 },
-  { title: 'Material UI', color: 'secondary', value: 70 },
-  { title: 'JS', color: 'secondary', value: 70 },
-  { title: 'Фигма', color: 'secondary', value: 60 },
-  { title: 'TypeScript', color: 'secondary', value: 20 },
-  { title: 'Менеджмент проекта', color: 'secondary', value: 70 },
-  { title: 'React', color: 'secondary', value: 80 },
-  { title: 'Тимидерство', color: 'secondary', value: 70 },
-  { title: 'Redux', color: 'secondary', value: 80 },
-  { title: 'GIT/GITFLOW', color: 'secondary', value: 60 },
-  { title: 'Saga', color: 'secondary', value: 70 },
-  { title: 'Backend', color: 'secondary', value: 50 },
-  { title: 'Websockets', color: 'secondary', value: 40 },
-  { title: 'MySQL', color: 'secondary', value: 50 },
-  { title: 'Архитектура', color: 'secondary', value: 70 },
-  { title: 'Docker', color: 'secondary', value: 30 },
-  { title: 'Автотесты', color: 'secondary', value: 30 },
-  { title: 'Linux', color: 'secondary', value: 30 },
-  { title: 'MicroFrontend', color: 'secondary', value: 20 },
+  { title: 'HTML', value: 80 },
+  { title: 'UX/UI', value: 50 },
+  { title: 'CSS', value: 80 },
+  { title: 'Material UI', value: 70 },
+  { title: 'JS', value: 70 },
+  { title: 'Фигма', value: 60 },
+  { title: 'TypeScript', value: 20 },
+  { title: 'React', value: 80 },
+  { title: 'Тимидерство', value: 70 },
+  { title: 'Redux', value: 80 },
+  { title: 'GIT/GITFLOW', value: 60 },
+  { title: 'Saga', value: 70 },
+  { title: 'Backend', value: 50 },
+  { title: 'Websockets', value: 40 },
+  { title: 'MySQL', value: 50 },
+  { title: 'Архитектура', value: 70 },
+  { title: 'Docker', value: 30 },
+  { title: 'Автотесты', value: 30 },
+  { title: 'MicroFrontend', value: 20 },
+  { title: 'Менеджмент проекта', value: 70 },
+];
+
+export const menu = [
+  { title: 'Главная', link: 'main' },
+  { title: 'Скилы', link: 'skills' },
+  { title: 'Опыт', link: 'experience' },
+  { title: 'Образование', link: 'education' },
+  { title: 'О себе', link: 'about' },
+];
+
+export const social = [
+  { title: 'https://github.com/ArsenalGear', icon: <FaGithub /> },
+  { title: 'https://t.me/ArsGear', icon: <FaTelegramPlane /> },
+  { title: 'https://linkedin.com/in/alexandr-boldarev', icon: <FaLinkedinIn /> },
+];
+
+export const about = [
+  {
+    text:
+      'Всегда активен по части предложения новых нестандартных решений как по\n' +
+      '          проекту (выход за рамки своей ответственности), так и за его пределами.',
+  },
+  {
+    text:
+      ' Обожаю работать в хорошо сформированной Scrum команде, с позитивным настроем\n' +
+      '          и чувством юмора. Есть положительный опыт работы в качестве Фронтэнд Тимлида в Финтех\n' +
+      '          проекте с составом в 6 человек и опытом работы в командах более 20 человек одновременно.',
+  },
+  {
+    text:
+      ' Очень ответственно отношусь к своей и чужой работе и стараюсь всегда довести\n' +
+      '          ее до конечного результата. Читаю на английском без словаря. Всячески стараюсь развивать\n' +
+      '          себя самостоятельно как по процессу написания кода, так и как личность. В свободное время\n' +
+      '          люблю кататься на велосипеде.',
+  },
+  { text: 'Владею английским на уровне B1.' },
 ];

@@ -31,7 +31,7 @@ export const SkillName = withStyles(theme => ({
 export const SkillsBlockWrapper = withStyles(theme => ({
   root: {
     width: '48%',
-    marginBottom: '1rem',
+    marginBottom: '2rem',
     [theme.breakpoints.up(1920)]: {},
   },
 }))(Box);
@@ -41,9 +41,7 @@ export const BorderLinearProgress = withStyles(theme => ({
     width: '100%',
     height: 20,
     borderRadius: 5,
-  },
-  colorPrimary: {
-    backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
+    backgroundColor: theme.palette.primary.grey,
   },
   bar: {
     borderRadius: 5,

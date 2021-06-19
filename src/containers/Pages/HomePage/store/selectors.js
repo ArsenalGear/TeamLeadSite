@@ -3,10 +3,10 @@ import { initialDictionaryState } from './reducer';
 
 const selectDictionaries = state => state.dictionaries || initialDictionaryState;
 
-const testDataSelector = () =>
+const menuDataSelector = () =>
   createSelector(
     selectDictionaries,
     state => state.data,
   );
 
-export { testDataSelector };
+export { menuDataSelector };

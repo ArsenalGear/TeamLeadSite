@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_BASE_ADDRESS = 'https://jsonplaceholder.typicode.com';
+export const API_BASE_ADDRESS = 'https://api.rf-server.ru/api';
 
 export const client = axios.create({
   baseURL: API_BASE_ADDRESS,

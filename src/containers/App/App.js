@@ -1,19 +1,20 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
-import { HomePageLayout } from '../Layouts/HomePageLayout';
+import { Header } from '../../components/htmlSections/Header';
+import { AboutMe } from '../Pages/HomePage/components/AboutMeBox';
 import { HomePage } from '../Pages/HomePage';
+import { SiteLayout } from './styles';
 
 function App() {
   return (
-    <Grid container>
-      {/* шапка и футер */}
-      <HomePageLayout>
-        {/* здесь можно закреплять роуты на разные страницы */}
-        {/* тело страницы без шапки и футера */}
-        {/* сюда залетает ко`нкретный main конкретной страницы */}
+    <SiteLayout>
+      <Header container />
+      <main>
         <HomePage />
-      </HomePageLayout>
-    </Grid>
+      </main>
+      <footer>
+        <AboutMe />
+      </footer>
+    </SiteLayout>
   );
 }
 

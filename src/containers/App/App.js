@@ -1,4 +1,5 @@
 import React from 'react';
+import { YMInitializer } from 'react-yandex-metrika';
 import { Header } from '../../components/htmlSections/Header';
 import { AboutMe } from '../Pages/HomePage/components/AboutMeBox';
 import { HomePage } from '../Pages/HomePage';
@@ -12,6 +13,11 @@ function App() {
         <HomePage />
       </main>
       <footer>
+        <YMInitializer
+          accounts={[81333502]}
+          options={{ webvisor: true, defer: true }}
+          version="2"
+        />
         <AboutMe />
       </footer>
     </SiteLayout>

@@ -41,7 +41,10 @@ export const BorderLinearProgress = withStyles(theme => ({
     width: '100%',
     height: 20,
     borderRadius: 5,
-    backgroundColor: theme.palette.primary.grey,
+    backgroundColor: theme.palette.primary.darkGrey,
+    '&:hover': {
+      opacity: 0.9,
+    },
   },
   bar: {
     borderRadius: 5,

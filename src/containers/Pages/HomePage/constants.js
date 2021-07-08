@@ -74,7 +74,7 @@ export const skills = [
   { title: 'Material UI', value: 70 },
   { title: 'JS', value: 70 },
   { title: 'Фигма', value: 60 },
-  { title: 'TypeScript', value: 20 },
+  { title: 'TypeScript', value: 30 },
   { title: 'React', value: 80 },
   { title: 'Тимидерство', value: 70 },
   { title: 'Redux', value: 80 },

@@ -28,6 +28,7 @@ export const TimelineOppositeData = withStyles(theme => ({
     marginTop: 18,
     padding: '0 1rem 0 0',
     whiteSpace: 'nowrap',
+    color: theme.palette.primary.white,
     [theme.breakpoints.up(1920)]: {},
   },
 }))(TimelineOppositeContent);

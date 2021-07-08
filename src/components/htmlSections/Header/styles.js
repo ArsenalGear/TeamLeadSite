@@ -18,7 +18,7 @@ export const useStyles = makeStyles(theme => ({
     zIndex: 1030,
     padding: '5px 0',
     color: theme.palette.secondary.main,
-    backgroundColor: '#343a40',
+    backgroundColor: theme.palette.primary.darkGrey,
   },
   navList: {
     display: 'flex',

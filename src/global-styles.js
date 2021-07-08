@@ -5,7 +5,7 @@ import { grey } from '@material-ui/core/colors';
 const GlobalStyle = createGlobalStyle`
   html,
   body {
-    background-color: black;
+    background-color: #1e1e1e;
   }
 
   body {
@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
 
   section {
     width: 100%;
-    min-height: 100vh;
+    //min-height: 100vh;
     margin-bottom: 7rem;
   }
 
@@ -67,6 +67,7 @@ const theme = createMuiTheme({
       white: '#fafafa',
       blue: '#61dbfb',
       grey: grey[400],
+      darkGrey: '#343a40',
     },
     secondary: {
       main: grey[50],

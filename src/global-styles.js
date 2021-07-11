@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { createMuiTheme } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
+import { createTheme } from '@material-ui/core';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 export { GlobalStyle };
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: grey[900],
